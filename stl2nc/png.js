@@ -45,13 +45,13 @@ export function calculate_png_image(filename)
     let ratio = stl.get_work_width() / stl.get_work_height();
     
     if (ratio >= 1) {
-        global_maxX = 1024;
-        global_maxY = 1024 / ratio;
+        global_maxX = 4096;
+        global_maxY = 4096 / ratio;
     } else {
-        global_maxX = 1024 * ratio;
-        global_maxY = 1024;
+        global_maxX = 4096 * ratio;
+        global_maxY = 4096;
     }
-    pixelsize = Math.max(stl.get_work_width(), stl.get_work_height()) / 1024;
+    pixelsize = Math.max(stl.get_work_width(), stl.get_work_height()) / 4096;
     
     
     global_maxX = Math.ceil(global_maxX);
